@@ -14,13 +14,13 @@ const httpOptions = {
 })
 export class UserService {
   constructor(private http: HttpClient) {}
-  private userUrl = 'http://10.80.148.245:8081/user';
+  private userUrl = 'http://localhost:8081/user';
 
   //Creamos la funcion getUsers para obtener un array con los usuarios de la base de datos
   public getUsers() {
     return this.http.get<User[]>(this.userUrl);
   }
   public deleteUser(user: User) {
-    return this.http.delete(this.userUrl + '/' + user.id);
+    return this.http.delete(this.userUrl + '/delete/' + user.id);
   }
 }
