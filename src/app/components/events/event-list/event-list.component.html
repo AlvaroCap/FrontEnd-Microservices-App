@@ -5,17 +5,16 @@
     <thead>
       <tr>
         <th class="hidden">Id</th>
-        <th>id</th>
-        <th>name</th>
+        <th>Nombre</th>
         <th>shortDesc</th>
-        <th>shortDesc</th>
-        <th>date</th>
-        <th>schedule</th>
-        <th>price</th>
-        <th>siteName</th>
-        <th>siteCity</th>
-        <th>capacity</th>
-        <th>genre</th>
+        <th>longDesc</th>
+        <th>Fecha</th>
+        <th>Horario</th>
+        <th>Precio</th>
+        <th>Nombre del sitio</th>
+        <th>Ciudad</th>
+        <th>Capacidad</th>
+        <th>Genero</th>
       </tr>
     </thead>
     <tbody>
@@ -25,19 +24,19 @@
         <td>{{ event.shortDesc }}</td>
         <td>{{ event.longDesc }}</td>
         <td>{{ event.date }}</td>
-        <td>{{ event.longDesc }}</td>
         <td>{{ event.schedule }}</td>
         <td>{{ event.price }}</td>
         <td>{{ event.siteName }}</td>
         <td>{{ event.siteCity }}</td>
         <td>{{ event.capacity }}</td>
         <td>{{ event.genre }}</td>
-        <!-- <td>
-          <button class="btn btn-danger" (click)="deleteUser(user)">
-            Delete User
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(event)">
+            Delete
           </button>
-        </td> -->
+        </td>
       </tr>
     </tbody>
+    <a href="/event-add">Añadir un nuevo Evento</a>
   </table>
 </div>
