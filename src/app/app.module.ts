@@ -9,6 +9,15 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { EventAddComponent } from './components/events/event-add/event-add.component';
 import { EventListComponent } from './components/events/event-list/event-list.component';
 
+//Importamos el servicio User
+import { UserService } from './services/user.service';
+
+//Importamos la configuración para la conexión http
+import { HttpClientModule } from '@angular/common/http';
+
+//Importamos los formularios de Angular
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +26,15 @@ import { EventListComponent } from './components/events/event-list/event-list.co
     EventListComponent,
     EventAddComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    //Configuracion Nueva
+    HttpClientModule,
+    FormsModule,
+  ],
+  providers: [UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
