@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column mainContainer">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Microservices Project</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" routerLinkActive="active" routerLink="/event-list"
+          >Events</a
+        >
+        <a class="nav-link" routerLinkActive="active" routerLink="/user-list"
+          >Users</a
+        >
+      </nav>
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Creado por Álvaro y Jorge</p>
+    </div>
+  </footer>
+</div>

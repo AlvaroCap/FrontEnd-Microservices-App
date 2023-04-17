@@ -23,4 +23,7 @@ export class UserService {
   public deleteUser(user: User) {
     return this.http.delete(this.userUrl + '/delete/' + user.id);
   }
+  public addUser(user:User){
+    return this.http.post<User>(this.userUrl, user);
+  }
 }
