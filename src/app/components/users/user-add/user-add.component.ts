@@ -15,9 +15,7 @@ import { Router } from '@angular/router';
 export class UserAddComponent {
   user: User = new User();
   constructor(private router: Router, private userService: UserService) {}
-  addUser(user: User): void {
-    this.userService.addUser(user).subscribe((data) => {
-      alert('Usuario generado de forma correcta.');
-    });
+  addUser(): void {
+    this.userService.addUser(this.user).subscribe((data) => {});
   }
 }
