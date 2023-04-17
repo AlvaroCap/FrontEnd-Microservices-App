@@ -1,1 +1,42 @@
-<p>user-add works!</p>
+<div class="col-md-6 userAddContent">
+  <h2 class="text-center">Add User</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Nombre del Usuario:</label>
+      <input
+        type="text"
+        [(ngModel)]="user.name"
+        placeholder="Nombre"
+        name="name"
+        class="form-control"
+        id="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastname">Apellido del Usuario:</label>
+      <input
+        type="text"
+        [(ngModel)]="user.lastName"
+        placeholder="Apellido"
+        name="lastname"
+        class="form-control"
+        id="apellido"
+      />
+    </div>
+    <div class="form-group">
+      <label for="mail">Correo del Usuario:</label>
+      <input
+        type="text"
+        [(ngModel)]="user.mail"
+        placeholder="Correo "
+        name="mail"
+        class="form-control"
+        id="mail"
+      />
+    </div>
+
+    <button class="btn btn-success" routerLink="/user-list" (click)="addUser()">
+      Create
+    </button>
+  </form>
+</div>
