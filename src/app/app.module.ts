@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserAddComponent } from './components/users/user-add/user-add.component';
 import { UserListComponent } from './components/users/user-list/user-list.component';
+import { EventAddComponent } from './components/events/event-add/event-add.component';
+import { EventListComponent } from './components/events/event-list/event-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserAddComponent,
-    UserListComponent
+    UserListComponent,
+    EventListComponent,
+    EventAddComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
