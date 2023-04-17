@@ -18,8 +18,12 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
     this.eventService.getEvents().subscribe((data) => {
       this.events = data;
-      console.log("Datos: " + data);
     });
-    
+  }
+
+  deleteUser(event: Event): void {
+    this.eventService.deleteEvent(event).subscribe((data) => {
+      this.events = this.events.filter((e) => e !== event);
+    });
   }
 }

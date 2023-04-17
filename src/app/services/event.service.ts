@@ -18,4 +18,12 @@ export class EventService {
   public getEvents() {
     return this.http.get<Event[]>(this.eventUrl);
   }
+
+  public addEvent(event: Event) {
+    return this.http.post<Event>(this.eventUrl + "/save", event);
+  }
+
+  public deleteEvent(event: Event) {
+    return this.http.delete(this.eventUrl + '/delete/' + event.id);
+  }
 }
