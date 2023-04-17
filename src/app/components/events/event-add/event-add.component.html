@@ -1,1 +1,125 @@
-<p>event-add works!</p>
+<div class="col-md-6">
+  <h2 class="text-center">Add User</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Nombre del Evento:</label>
+      <input
+        type="text"
+        [(ngModel)]="event.name"
+        placeholder="Nombre"
+        name="name"
+        class="form-control"
+        id="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="shortDesc">Breve Desc:</label>
+      <input
+        [(ngModel)]="event.shortDesc"
+        placeholder="Descripcion corta"
+        name="shortDesc"
+        class="form-control"
+        id="shortDesc"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="longDesc">Descripcion completa:</label>
+      <input
+        [(ngModel)]="event.longDesc"
+        placeholder="Descripcion completa"
+        name="longDesc"
+        class="form-control"
+        id="longDesc"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Fecha:</label>
+      <input
+        [(ngModel)]="event.date"
+        placeholder="Fecha"
+        name="date"
+        class="form-control"
+        id="date"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="schedule">Horario:</label>
+      <input
+        [(ngModel)]="event.schedule"
+        placeholder="Horario"
+        name="schedule"
+        class="form-control"
+        id="schedule"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Precio:</label>
+      <input
+        type="number"
+        [(ngModel)]="event.price"
+        placeholder="Precio"
+        name="price"
+        class="form-control"
+        id="price"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="siteName">Nombre del sitio:</label>
+      <input
+        [(ngModel)]="event.siteName"
+        placeholder="Nombre del Sitio"
+        name="siteName"
+        class="form-control"
+        id="siteName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="siteCity">Ciudad:</label>
+      <input
+        [(ngModel)]="event.siteCity"
+        placeholder="Ciudad"
+        name="siteCity"
+        class="form-control"
+        id="siteCity"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="capacity">Capacidad:</label>
+      <input
+        [(ngModel)]="event.capacity"
+        type="number"
+        placeholder="Capacidad"
+        name="capacity"
+        class="form-control"
+        id="capacity"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="genre">Tipo de Evento:</label>
+      <input
+        [(ngModel)]="event.genre"
+        placeholder="Tipo de Evento"
+        name="genre"
+        class="form-control"
+        id="genre"
+      />
+    </div>
+
+    <button
+      class="btn btn-success"
+      routerLink="/event-list"
+      (click)="addEvent()"
+    >
+      Create
+    </button>
+  </form>
+</div>

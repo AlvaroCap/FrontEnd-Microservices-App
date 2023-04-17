@@ -1,1 +1,42 @@
-<p>event-list works!</p>
+<div>
+  <h2>User Details</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Nombre</th>
+        <th>shortDesc</th>
+        <th>longDesc</th>
+        <th>Fecha</th>
+        <th>Horario</th>
+        <th>Precio</th>
+        <th>Nombre del sitio</th>
+        <th>Ciudad</th>
+        <th>Capacidad</th>
+        <th>Genero</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of events">
+        <td class="hidden">{{ event.id }}</td>
+        <td>{{ event.name }}</td>
+        <td>{{ event.shortDesc }}</td>
+        <td>{{ event.longDesc }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.schedule }}</td>
+        <td>{{ event.price }}</td>
+        <td>{{ event.siteName }}</td>
+        <td>{{ event.siteCity }}</td>
+        <td>{{ event.capacity }}</td>
+        <td>{{ event.genre }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(event)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <a href="/event-add">Añadir un nuevo Evento</a>
+  </table>
+</div>
