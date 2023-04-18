@@ -20,8 +20,6 @@ import { FormsModule } from '@angular/forms';
 
 import { EventModifyComponent } from './components/events/event-modify/event-modify.component';
 
-import { UserModifyComponent } from './components/users/user-modify/user-modify.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +28,6 @@ import { UserModifyComponent } from './components/users/user-modify/user-modify.
     EventListComponent,
     EventAddComponent,
     EventModifyComponent,
-    UserModifyComponent,
   ],
   imports: [
     BrowserModule,
