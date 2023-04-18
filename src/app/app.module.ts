@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Importamos los formularios de Angular
 import { FormsModule } from '@angular/forms';
+import { UserModifyComponent } from './components/users/user-modify/user-modify.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     UserListComponent,
     EventListComponent,
     EventAddComponent,
+    UserModifyComponent,
   ],
   imports: [
     BrowserModule,
