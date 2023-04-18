@@ -21,11 +21,13 @@
           <button class="btn btn-danger" (click)="deleteUser(user)">
             Delete User
           </button>
-           <button class="btn btn-warning" [routerLink]="['/user-modify', user.id]">
-            Delete User
+          <button
+            class="btn btn-warning"
+            routerLink="/user-add/{{ user.id }}"
+          >
+            Edit User
           </button>
         </td>
-
       </tr>
     </tbody>
   </table>

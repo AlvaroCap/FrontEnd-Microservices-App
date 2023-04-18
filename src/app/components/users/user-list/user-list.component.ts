@@ -29,4 +29,5 @@ export class UserListComponent implements OnInit {
       this.userList = this.userList.filter((u) => u !== user);
     });
   }
+
 }

@@ -1,10 +1,12 @@
 <div class="col-md-6 userAddContent">
-  <h2 class="text-center">Add User</h2>
+  <h2 class="text-center" *ngIf="this.id != null">Edit User</h2>
+  <h2 class="text-center" *ngIf="this.id == null">Add User</h2>
   <form>
     <div class="form-group">
       <label for="name">Nombre del Usuario:</label>
       <input
         type="text"
+        value="{{ user.name }}"
         [(ngModel)]="user.name"
         placeholder="Nombre"
         name="name"
@@ -16,6 +18,7 @@
       <label for="lastname">Apellido del Usuario:</label>
       <input
         type="text"
+        value="{{ user.lastName }}"
         [(ngModel)]="user.lastName"
         placeholder="Apellido"
         name="lastname"
@@ -30,13 +33,22 @@
         [(ngModel)]="user.mail"
         placeholder="Correo "
         name="mail"
+        value="{{ user.mail }}"
         class="form-control"
         id="mail"
       />
     </div>
 
-    <button class="btn btn-success" routerLink="/user-list" (click)="addUser()">
-      Create
+    <button
+      class="btn btn-success"
+      routerLink="/user-list"
+      *ngIf="this.id != null"
+      (click)="updateUser()"
+    >
+      Save
+    </button>
+    <button class="btn btn-success" *ngIf="this.id == null" (click)="addUser()">
+      Save
     </button>
   </form>
 </div>

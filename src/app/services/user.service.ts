@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
-
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -33,6 +33,11 @@ export class UserService {
 
   //Función en service para modificar el usuario
   public updateUser(user: User) {
-    return this.http.put<User>(this.userUrl + '/save', user);
+    return this.http.put<User>(this.userUrl, user);
+  }
+
+  //Función en service para encotrar al usuario por su identificador
+  public findById(id: any) {
+    return this.http.get<User>(this.userUrl + '/' + id);
   }
 }
