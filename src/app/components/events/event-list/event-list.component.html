@@ -30,17 +30,22 @@
         <td>{{ event.siteCity }}</td>
         <td>{{ event.capacity }}</td>
         <td>{{ event.genre }}</td>
-        <td>
-          <button [routerLink]="['/event-modify', event.id]">
-            Modificar
-          </button>
+        <td class="buttons">
           <button class="btn btn-danger" (click)="deleteUser(event)">
             Delete
+          </button>
+          <button
+            class="btn btn-warning warningButton"
+            [routerLink]="['/event-modify', event.id]"
+          >
+            Modificar
           </button>
         </td>
       </tr>
     </tbody>
     <!-- <a href="/event-add">Añadir un nuevo Evento</a> -->
-    <button class="btn btn-warning" routerLink="/event-add">Añadir Event</button>
+    <button class="btn btn-warning" routerLink="/event-add">
+      Añadir Event
+    </button>
   </table>
 </div>
