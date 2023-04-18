@@ -31,8 +31,14 @@ export class EventAddComponent implements OnInit {
         this.event.id = data.id;
         this.event.name = data.name;
         this.event.shortDesc = data.shortDesc;
+        this.event.longDesc = data.longDesc;
+        this.event.date = data.date;
+        this.event.schedule = data.schedule;
         this.event.price = data.price;
+        this.event.siteName = data.siteName;
+        this.event.siteCity = data.siteCity;
         this.event.capacity = data.capacity;
+        this.event.genre = data.genre;
       });
     }
   }

@@ -118,6 +118,14 @@
     <button
       class="btn btn-success"
       routerLink="/event-list"
+      *ngIf="this.id != null"
+      (click)="updateEvent()"
+    >
+      Modify
+    </button>
+    <button
+      class="btn btn-success"
+      *ngIf="this.id == null"
       (click)="addEvent()"
     >
       Create
