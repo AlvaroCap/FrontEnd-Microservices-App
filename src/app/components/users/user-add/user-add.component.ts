@@ -18,4 +18,5 @@ export class UserAddComponent {
   addUser(): void {
     this.userService.addUser(this.user).subscribe((data) => {});
   }
+ 
 }

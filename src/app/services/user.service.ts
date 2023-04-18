@@ -20,10 +20,19 @@ export class UserService {
   public getUsers() {
     return this.http.get<User[]>(this.userUrl);
   }
+
+  //Función en service para eliminar un usuario
   public deleteUser(user: User) {
     return this.http.delete(this.userUrl + '/delete/' + user.id);
   }
+
+  //Función en service para añadir un usuario
   public addUser(user: User) {
     return this.http.post<User>(this.userUrl + '/save', user);
+  }
+
+  //Función en service para modificar el usuario
+  public updateUser(user: User) {
+    return this.http.put<User>(this.userUrl + '/save', user);
   }
 }
