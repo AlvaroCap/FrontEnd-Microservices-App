@@ -17,12 +17,12 @@
         <td>{{ user.name }}</td>
         <td>{{ user.lastName }}</td>
         <td>{{ user.mail }}</td>
-        <td>
+        <td class="buttons">
           <button class="btn btn-danger" (click)="deleteUser(user)">
             Delete User
           </button>
           <button
-            class="btn btn-warning"
+            class="btn btn-warning warningButton"
             routerLink="/user-add/{{ user.id }}"
           >
             Edit User
