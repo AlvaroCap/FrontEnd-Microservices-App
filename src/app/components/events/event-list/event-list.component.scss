@@ -27,12 +27,13 @@
 .buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.buttons button {
-  color: white;
-  border-radius: 15px;
-  box-shadow: 1px 4px #0f0f0f;
-}
-.buttons button:hover {
-  background-color: blue;
-}
+// .buttons button {
+//   color: white;
+//   border-radius: 15px;
+//   box-shadow: 1px 4px #0f0f0f;
+// }
+// .buttons button:hover {
+//   background-color: blue;
+// }
