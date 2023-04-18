@@ -11,7 +11,7 @@
         <th>Fecha</th>
         <th>Horario</th>
         <th>Precio</th>
-        <th>Nombre del sitio</th>
+        <th>Localizacion</th>
         <th>Ciudad</th>
         <th>Capacidad</th>
         <th>Genero</th>
@@ -31,6 +31,9 @@
         <td>{{ event.capacity }}</td>
         <td>{{ event.genre }}</td>
         <td>
+          <button [routerLink]="['/event-modify', event.id]">
+            Modificar
+          </button>
           <button class="btn btn-danger" (click)="deleteUser(event)">
             Delete
           </button>
