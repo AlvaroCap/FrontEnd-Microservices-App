@@ -22,18 +22,17 @@
   width: 30px;
 }
 .warningButton {
-  margin-left: 4%;
+  margin-top: 5%;
 }
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.buttons button {
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 1px 4px #0f0f0f;
+  width: 70%;
 }
-// .buttons button {
-//   color: white;
-//   border-radius: 15px;
-//   box-shadow: 1px 4px #0f0f0f;
-// }
-// .buttons button:hover {
-//   background-color: blue;
-// }
+.buttons button:hover {
+  background-color: blue;
+}
