@@ -28,14 +28,12 @@ export class UserAddComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id != null) {
-      this.userService
-        .findById(this.route.snapshot.paramMap.get('id'))
-        .subscribe((data) => {
-          this.user.id = data.id;
-          this.user.name = data.name;
-          this.user.lastName = data.lastName;
-          this.user.mail = data.mail;
-        });
+      this.userService.findById(this.id).subscribe((data) => {
+        this.user.id = data.id;
+        this.user.name = data.name;
+        this.user.lastName = data.lastName;
+        this.user.mail = data.mail;
+      });
     }
   }
   updateUser(): void {
