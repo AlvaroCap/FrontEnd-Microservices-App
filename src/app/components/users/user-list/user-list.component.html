@@ -21,7 +21,11 @@
           <button class="btn btn-danger" (click)="deleteUser(user)">
             Delete User
           </button>
+           <button class="btn btn-warning" [routerLink]="['/user-modify', user.id]">
+            Delete User
+          </button>
         </td>
+
       </tr>
     </tbody>
   </table>

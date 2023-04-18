@@ -17,7 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Importamos los formularios de Angular
 import { FormsModule } from '@angular/forms';
+
 import { EventModifyComponent } from './components/events/event-modify/event-modify.component';
+
+import { UserModifyComponent } from './components/users/user-modify/user-modify.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { EventModifyComponent } from './components/events/event-modify/event-mod
     EventListComponent,
     EventAddComponent,
     EventModifyComponent,
+    UserModifyComponent,
   ],
   imports: [
     BrowserModule,
